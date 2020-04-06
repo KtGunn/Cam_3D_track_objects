@@ -1,6 +1,5 @@
-# SFND 3D Object Tracking
-
-Welcome to the final project of the camera course.
+# Final Project of Camera Section : Estimating TTC with Camera Image and Lidar data
 
 <img src="pngs.d/3DTrack.png" />
 
+The following tasks were comleted:
