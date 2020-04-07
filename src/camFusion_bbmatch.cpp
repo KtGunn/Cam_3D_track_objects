@@ -109,7 +109,7 @@ void matchBoundingBoxes(std::vector<cv::DMatch> &matches, std::map<int,int> &bbB
 	    }
 	}
 
-	// Best match
+	// Best match final
 	bbBestMatches.insert (std::pair<int,int>(prevBoxID, currBoxID));
     }
     return;

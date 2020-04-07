@@ -32,7 +32,7 @@ void clusterKptMatchesWithROI (BoundingBox &boundingBox, std::vector<cv::KeyPoin
     float shortest = 1E10;   // Also note shortest and longest
     float longest = 0.0f;
 
-    bool verbose = true;
+    bool verbose = false;
     
     ///////////////////////////////////////////////////////////////////
     /// Cycle over all keypoint matches
