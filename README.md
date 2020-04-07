@@ -17,8 +17,16 @@ The following software creation tasks were given and completed:
 
 These tasks are found in files in the 'src' directory. There is a separate file for each task to better isolate and review them.These files were broken out from the camFusion_Student.cpp file. The CMakeLists.txt file has been accordingly updated.
 
-The source compiles and executes except that 'yolo' config files needed to run the application must be provided. They were too large for thefree repository on gitub.
+The source compiles and executes except that 'yolo' config files needed to run the application must be provided. They were too large for the free repository on gitub.
 
+
+### Lidar based TTC Estimates
+
+<img src="pngs.d/TTC-Cam-Lidar.png" />
+
+The image above shows estimates of TTC using both camera images and lidar. We see for the most part reasonable agreement between the two methods. But there are oddities in the mix. To get a getter take on the Lidar TTC estimate we can look at the distance to the leading vehicle over the sequence of scans. This is shown in the image below.
+
+<img src="pngs.d/Lidar-TTC.png" />
 
 
 
