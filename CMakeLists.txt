@@ -19,6 +19,7 @@ add_executable (
   src/camFusion_Student.cpp
   src/camFusion_bbmatch.cpp
   src/camFusion_ttccamera.cpp
+  src/camFusion_ttclidar.cpp
   src/camFusion_cluskpt.cpp
   src/FinalProject_Camera.cpp
   src/lidarData.cpp

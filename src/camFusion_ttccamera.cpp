@@ -20,17 +20,14 @@ void computeTTCCamera (std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyP
 {
     // The objective is calculate the TTC using change
     //  in a 'characteristic' dimension between two images.
-    // The characteristic dimension is the ratio of matched keypoints,
-    //  computed for each image
-    // Outliers are to be remved
+    // The characteristic dimension is the ratio of matched
+    //  keypoint distances computed for each image
+    // Outliers are to be removed
     
     double minLength = 100.0; // Using same value as in lesson #2
     std::vector<double> charDim;
 
-    double smallest = 1E10;
-    double largest = 0.;
-    double sum = 0.0;
-    
+
     //////////////////////////////////////////////////////////////////////////
     /// Cycle over the keypoints for the object
     //
@@ -43,8 +40,6 @@ void computeTTCCamera (std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyP
 	cv::KeyPoint kpPrev = kptsPrev.at (itA->queryIdx);
 	
 	for (auto itB=kptMatches.begin()+1; itB!=kptMatches.end();  itB++) {
-	    
-	    //if (itB == itA) { continue; } // Skip the identical match
 	    
 	    ///////////////////////////////////////////////
 	    /// Reference
@@ -59,12 +54,7 @@ void computeTTCCamera (std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyP
             if (lenPrev > std::numeric_limits<double>::epsilon() && lenCurr >= minLength) {
                 double distRatio = lenCurr / lenPrev;
                 charDim.push_back (distRatio);
-
-		sum += distRatio;
-		if (distRatio > largest) { largest = distRatio; }
-		if (distRatio < smallest) { smallest = distRatio; }
 	    }
-	    
 	}
     }
 
@@ -81,14 +71,13 @@ void computeTTCCamera (std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyP
     double avgRatio = sumUp / count;
     double median = charDim[floor(charDim.size()/2)];
     
-    bool verbose = true;
+    bool verbose = false;
     if (verbose) {
 	cout << "\ncomputeTTCCamera:\n";
 	cout << "Pre vec: Small=" << charDim[0] <<  " larg=" << charDim[count-1]
-	     << " avg=" << avgRatio << " @ " << count
-	     << " median=" << median << endl;
+	     << " avg=" << avgRatio << " @ " << count << " median=" << median << endl;
 	for (auto it=charDim.begin();it!=charDim.end(); it++) {
-	    //cout << *it << endl;
+	    cout << *it << endl;
 	}
     }
 
@@ -108,10 +97,10 @@ void computeTTCCamera (std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyP
 	float minimumR = factor*avgRatio;
 	float maximumR = (1.0 + factor)*avgRatio;
 	
-	count = 0;  // Keep track of pruning effect
-	sumUp = 0.0;
-	smallest = 1E10;
-	largest = 0.0;
+	int count = 0;  // Keep track of pruning effect
+	float sumUp = 0.0;
+	float smallest = 1E10;
+	float largest = 0.0;
 	
 	for (auto it=charDim.begin();it!=charDim.end(); it++) {
 	    double ratio = *it;
@@ -140,12 +129,6 @@ void computeTTCCamera (std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyP
     // Estimated time to collision (TTC)
     double dT = -1.0 / frameRate;
     TTC = dT / (1.0 - referenceDistance);
-
-    if (verbose) {
-	cout << "Post vec: Small=" << smallest <<  " larg=" << largest
-	     << " avg=" << avgRatio << " @ " << count << " TTC=" << TTC
-	     << " frame rate=" << frameRate << endl;
-    }
 
     // ...
 }
