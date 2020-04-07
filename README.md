@@ -28,6 +28,14 @@ The image above shows estimates of TTC using both camera images and lidar. We se
 
 <img src="pngs.d/Lidar-TTC.png" />
 
+Lidar measurements indicate that the distance to the preceding vehicle is steadily decreasing from 7.913m to 6.814m in 17 steps. This is an average decrease of 0.065m/step. We see this average decrease in the image, but there are instances of deviation. A reason for this variation or error could be lack of accuracy. Note that the inverse relationship between distance decrease, and singularity at zero velocity, small variations can lead to large swings in TTC. But another factor is simply defining what is the location of the preceding vehicle to the ego car. Our working definition is the nearest reasonable lidar point.
+
+<img src="pngs.d/OverHead-1-18.png" />
+
+The image above shows an overhead rendition of two lidar scans, the first and the last. Note that you don't have a TTC estimate until the second scan.
+
+
+
 
 
 
