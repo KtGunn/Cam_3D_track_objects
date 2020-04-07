@@ -10,10 +10,10 @@ This write-up reports tasks that were performed in completion of the final proje
 
 The following software creation tasks were given and completed:
 
-A. Match 3D Objects;
-B. Compute lidar based TTC;
-C. Associate matched keypoints to bounding boxes;
-D. Compute camera based TTC.
+1. Match 3D Objects;
+2. Compute lidar based TTC;
+3. Associate matched keypoints to bounding boxes;
+4. Compute camera based TTC.
 
 These tasks are found in files in the 'src' directory. There is a separate file for each task to better isolate and review them.These files were broken out from the camFusion_Student.cpp file. The CMakeLists.txt file has been accordingly updated.
 
