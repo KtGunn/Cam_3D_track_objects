@@ -15,7 +15,7 @@ The following software creation tasks were given and completed:
 3. Associate matched keypoints to bounding boxes;
 4. Compute camera based TTC.
 
-These tasks are found in files in the 'src' directory. There is a separate file for each task to better isolate and review them.These files were broken out from the camFusion_Student.cpp file. The CMakeLists.txt file has been accordingly updated.
+These tasks are found in files in the 'src' directory. There is a separate file for each task to better isolate and review them.These files were broken out from the camFusion_Student.cpp file. In-code documentation is provided to explain the logic. The CMakeLists.txt file has been accordingly updated.
 
 The source compiles and executes except that 'yolo' config files needed to run the application must be provided. They were too large for the free repository on gitub.
 
