@@ -99,6 +99,9 @@ int main(int argc, const char *argv[])
 
 
     /// Quick & dirty way to specify detector+descriptor combo
+    
+    cout << endl << "usage: ./3D_object_tracking [<kptDetector>+<kptDescriptor>]" << endl << endl;
+    
     if (argc==2) {
 	// Input format is: Detector+Descriptor
 	string method (argv[1]);
