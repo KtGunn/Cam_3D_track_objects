@@ -1,0 +1,20 @@
+      SHITOMASI+BRISK                        FAST+BRISK     FAST+BRIEF       FAST+ORB
+Image  1 TTC lidar=12.9722 camera=15.108   camera=12.313   camera=10.7361  camera=10.9845
+Image  2 TTC lidar=12.264  camera=11.5143  camera=11.1041  camera=9.48894  camera=9.46831
+Image  3 TTC lidar=16.963  camera=13.9572  camera=12.9284  camera=13.5019  camera=10.8113
+Image  4 TTC lidar=12.4855 camera=13.0192  camera=12.5141  camera=14.3073  camera=12.8498
+Image  5 TTC lidar=13.2465 camera=12.3511  camera=68.6242  camera=17.049   camera=15.4925
+Image  6 TTC lidar=7.14812 camera=10.1266  camera=8.41804  camera=13.8065  camera=12.6225
+Image  7 TTC lidar=34.3404 camera=10.8587  camera=82.9685  camera=11.6549  camera=7.05117
+Image  8 TTC lidar=18.7875 camera=12.2419  camera=10.0723  camera=13.401   camera=10.6163
+Image  9 TTC lidar=15.8894 camera=10.3708  camera=11.5836  camera=9.4925   camera=8.11519
+Image 10 TTC lidar=13.7297 camera=-83.973  camera=7.00887  camera=8.70034  camera=8.5099
+Image 11 TTC lidar=11.3061 camera=12.199   camera=30.3673  camera=12.3599  camera=12.2323
+Image 12 TTC lidar=9.44414 camera=10.2815  camera=7.45209  camera=7.25252  camera=7.2694
+Image 13 TTC lidar=9.22307 camera=9.81698  camera=10.0813  camera=11.9654  camera=10.603
+Image 14 TTC lidar=11.89   camera=9.02236  camera=11.3472  camera=9.01469  camera=8.56338
+Image 15 TTC lidar=7.65435 camera=8.76284  camera=7.48838  camera=8.60661  camera=7.71739
+Image 16 TTC lidar=9.16582 camera=7.8678   camera=10.6085  camera=9.60933  camera=7.477
+Image 17 TTC lidar=9.8514  camera=8.31703  camera=7.60872  camera=7.28663  camera=7.18679
+Image 18 TTC lidar=8.30978 camera=8.28838  camera=9.11132  camera=9.33832  camera=8.22656
+

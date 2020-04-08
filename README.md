@@ -20,7 +20,7 @@ These tasks are found in files in the 'src' directory. There is a separate file 
 The source compiles and executes except that 'yolo' config files needed to run the application must be provided. They were too large for the free repository on gitub.
 
 
-### Lidar based TTC Estimates
+### Performance of Lidar based TTC Estimates
 
 <img src="pngs.d/TTC-Cam-Lidar.png" />
 
@@ -37,6 +37,10 @@ A factor in these variations is simply defining what is the location of the prec
 <img src="pngs.d/Lidar-Narr-Brd.png" />
 
 As a strategy going forward, it is just as important to weed out far outliers as outliers abnormally close. Estimating where the bulk of the lidar readings are is called for.
+
+### Performance of Camera based TTC Estimates
+
+<img src="pngs.d/TTCCam.png" />
 
 
 
