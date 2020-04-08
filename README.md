@@ -40,14 +40,6 @@ As a strategy going forward, it is just as important to weed out far outliers as
 
 ### Performance of Camera based TTC Estimates
 
-<img src="pngs.d/CamTTC.png" />
+<img src="pngs.d/FullCamTTC.png" />
 
-
-
-
-
-
-
-
-
-
+The image above presents a table comparing the TTC estimation of a few combinations of keypoint detectors and keypoint descriptors. Lidar estimates atr included for reference. It was argued above that the situation these images cover refer to the ego car gradually reducing its distance to the preceding vehicle. This implies that the TTC should gradually decrease with new images, especially assuming constant speed differenctial. From the tablet the SHITOMASI keypoint detectors do the best job of indicating this trend. The BRISK+BRIEF combination appears to perform poorly. The FAST keypoint detectors show the good quality of not producing wildly erroneous TTC estimates. The main reason for poor estimates of TTC must be an inability of the keypoint detector to detect consistent keypoints between successive images.
